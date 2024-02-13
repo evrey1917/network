@@ -48,9 +48,9 @@ int main()
     std::ofstream myfile;
     myfile.open("ping.csv");
 
-    for (int i = 0; i < columns.size(); i++)
+    for (int col = 0; col < columns.size(); col++)
     {
-        myfile << columns[i] << separator;
+        myfile << columns[col] << separator;
     }
     myfile << next_row;
 
@@ -68,9 +68,9 @@ int main()
 
         if (!data_to_write.empty())
         {
-            for (int i = 0; i < data_to_write.size(); i++)
+            for (int col = 0; col < data_to_write.size(); col++)
             {
-                myfile << data_to_write[i] << separator;
+                myfile << data_to_write[col] << separator;
             }
             myfile << next_row;
         }
